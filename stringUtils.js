@@ -13,4 +13,8 @@ export const numberFormatter = (rawNumber) => {
     return dec[0].split('').reverse().reduce(function (prev, now, i) {
         return i % 3 === 0 ? prev + sep + now : prev + now;
     }).split('').reverse().join('') + (dec[1] ? decsep + dec[1] : '');
+}
+export const snakeToTitleCase = (str) => {
+    return str.split('_').map(word => word.charAt(0).toUpperCase() + 
+word.slice(1)).join('');
 }% 
