@@ -10,3 +10,10 @@ encodeURIComponent(JSON.stringify(exportObj));
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
+
+export const isSimpleType = (value) => {
+    const simpleTypes = new Set(["boolean", "number", "string", "symbol"])
+    const valueType = typeof value
+    return (value !== undefined && (simpleTypes.has(valueType) || 
+value.substring || value.toFixed))
+}
