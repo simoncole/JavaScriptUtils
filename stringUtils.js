@@ -17,4 +17,9 @@ export const numberFormatter = (rawNumber) => {
 export const snakeToTitleCase = (str) => {
     return str.split('_').map(word => word.charAt(0).toUpperCase() + 
 word.slice(1)).join('');
+}
+export const snakeToSentenceCase(key: string) {
+    let result = key.replace(/_/g, ' ');
+    result = result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
+    return result;
 }% 
